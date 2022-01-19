@@ -1,0 +1,27 @@
+{
+    "family": "hello-world",
+    "taskRoleArn": "arn:aws:iam::655134473588:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::655134473588:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "containerDefinitions": [
+        {
+            "image": "655134473588.dkr.ecr.us-east-1.amazonaws.com/hello-world:version1",
+            "name": "hello-world",
+            "cpu": 500,
+            "memory": 1024,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 8080,
+                    "hostPort": 8080,
+                    "protocol": "tcp"
+                }
+            ]
+        }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "2048"
+}
